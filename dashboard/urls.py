@@ -14,5 +14,7 @@ urlpatterns = [
     path('deleteprofile/<int:id>', views.deleteprofile,name='deleteprofile'),
     path('useredit/<int:id>',views.useredit,name= 'useredit'),
     path('updateprofile/<int:id>', views.updateprofile, name='updateprofile'),
+    path('viewtransaction/', views.viewtransaction, name='dashboard-transaction'),
+    path('categoryreg/', views.categoryreg, name='categoryreg')
 ]  
 

@@ -22,9 +22,9 @@
         <table class="table custom-table">
             <thead>
                 <tr class="table-header">
-                    <th>USER ID</th>
-                    <th>USER NAME</th>
-                    <th>EMAIL</th>
+                    <th>USER Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
                     <th>DELETE</th>
                     <th>EDIT</th>
                 </tr>
@@ -32,14 +32,14 @@
             <tbody>
                 {% for x in users %}
                 <tr>
-                    <td>{{ x.uid }}</td>
                     <td>{{ x.username }}</td>
                     <td>{{ x.email }}</td>
+                    <td>******</td>
                     <td>
-                        <a href="/deleteprofile/{{ x.uid }}" class="action-link delete">Delete</a>
+                        <a href="/deleteprofile/{{ x.id }}" class="action-link delete">Delete</a>
                     </td>
                     <td>
-                        <a href="/useredit/{{ x.uid }}" class="action-link edit">Edit</a>
+                        <a href="/useredit/{{ x.id }}" class="action-link edit">Edit</a>
                     </td>
                 </tr>
                 {% endfor %}
