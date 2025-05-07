@@ -1,6 +1,7 @@
 from django.contrib.auth.hashers import make_password
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.db.models import Q
 from .models import User
 from .models import Transaction
 
@@ -51,7 +52,12 @@ def insertuser(request):
     return redirect('userreg')
 
 def userlist(request):
-    user = User.objects.all()
+
+    search_query = request.GET.get('search', '')
+    if search_query:
+        user = User.objects.filter(username__icontains=search_query)
+    else:
+        user = User.objects.all()
     return render(request, "dashboard/userlist.html",{'users': user})
 
 def deleteprofile(request, id):
