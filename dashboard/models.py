@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.hashers import make_password
+<<<<<<< HEAD
 from django.contrib.auth.models import AbstractUser
+=======
+>>>>>>> 6df282d63f60d85ee491f240f0d46cb6c7828add
 
 # Create your models here.
 

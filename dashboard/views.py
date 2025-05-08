@@ -4,9 +4,12 @@ from django.contrib import messages
 from django.db.models import Q
 from .models import User
 from .models import Transaction
+<<<<<<< HEAD
 from .models import Category1
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
+=======
+>>>>>>> 6df282d63f60d85ee491f240f0d46cb6c7828add
 
 
 # Create your views here.
@@ -102,12 +105,16 @@ def viewtransaction(request):
     transaction = Transaction.objects.all()
     return render(request, "dashboard/viewtransaction.html", {'transactiondata' : transaction})
 
+<<<<<<< HEAD
 def userreg(request):
     return render(request, 'dashboard/userreg.html', {})
+=======
+>>>>>>> 6df282d63f60d85ee491f240f0d46cb6c7828add
 
 def categoryreg(request):
     return render(request, 'dashboard/categoryreg.html', {}) 
 
+<<<<<<< HEAD
     return render(request, "dashboard/userlist.html",{'users': user})
 
 def insertcategory(request):
@@ -153,4 +160,6 @@ def categoryedit(request, id):
 
     
 
+=======
+>>>>>>> 6df282d63f60d85ee491f240f0d46cb6c7828add
 

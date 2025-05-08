@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'partials/base.html' %}
 
 {% block title %}Category Insertion{% endblock %}
@@ -51,3 +52,32 @@
     </form>
 </div>
 {% endblock %}
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+  <form name="register" method="post" action="insertcategor">
+        {% csrf_token %}
+    
+    <pre>
+        
+     CName          :   <input type="text" name="tcname" value="" width="200" ><br>
+     Set_budget     :   <input type="text" name="tset_budget" value="" width="200" ><br>
+     Total_spend    :   <input type="text" name="tspend" value="" width="200" ><br>
+     Username       :   <input type="text" name="tusername" value="" width="200"><br>
+      
+       <input type="submit" name="reg" value="Click to register" width="300" height="100">
+
+    </pre>
+  </form>
+</center>
+
+
+</body>
+</html>
+>>>>>>> 6df282d63f60d85ee491f240f0d46cb6c7828add

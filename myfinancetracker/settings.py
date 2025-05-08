@@ -80,7 +80,11 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'rupom123',
         'HOST': 'localhost',   # or 'localhost'
+<<<<<<< HEAD
         'PORT': '3307',
+=======
+        'PORT': '3306',
+>>>>>>> 6df282d63f60d85ee491f240f0d46cb6c7828add
     }
 }
 
@@ -103,7 +107,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+<<<<<<< HEAD
 #AUTH_USER_MODEL = 'auth.User'
+=======
+>>>>>>> 6df282d63f60d85ee491f240f0d46cb6c7828add
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
