@@ -1,0 +1,57 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}Edit User{% endblock %}
+
+{% block layout %}
+<!-- Override layout block to prevent homepage left/right panels from showing -->
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Edit Category</h2>
+    
+    <form method="post" action="{% url 'updatecategory' category.id %}" class="bg-white p-4 rounded shadow-sm">
+
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="cname">Category Name</label>
+            <input type="text" class="form-control" id="cname" name="cname" 
+                   value="{{ category.cname }}" required>
+            <small class="form-text text-muted">Must be unique</small>
+        </div>
+        
+        <div class="form-group">
+            <label for="cset_budget">Set New Budget</label>
+            <input type="cset_budget" class="form-control" id="cset_budget" name="cset_budget" 
+                   value="{{ category.cset_budget }}" required>
+            <small class="form-text text-muted">Must be positive</small>
+        </div>
+        
+        <!-- Password field (optional for editing) -->
+        <div class="form-group">
+            <label for="cspend">New Spend</label>
+            <input type="cspend" class="form-control" id="cspend" name="cspend" 
+                   value="{{ category.cspend }}" required>
+            <small class="form-text text-muted">Must be positive</small>
+        </div>
+
+        <div class="form-group">
+            <label for="cusername">New User</label>
+            <input type="cusername" class="form-control" id="cusername" name="cusername" 
+                   value="{{ category.cusername }}" required>
+            <small class="form-text text-muted">Must be original</small>
+        </div>
+
+        
+        <div class="d-flex justify-content-between mt-4">
+            <a href="{% url 'dashboard-category' %}" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Category
+            </a>
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+        </div>
+    </form>
+</div>
+{% endblock %}
